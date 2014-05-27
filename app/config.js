@@ -6,6 +6,18 @@ require.config({
     "almond": "../vendor/bower/almond/almond",
     "underscore": "../vendor/bower/lodash/dist/lodash.underscore",
     "jquery": "../vendor/bower/jquery/dist/jquery",
-    "backbone": "../vendor/bower/backbone/backbone"
-  }
+    "backbone": "../vendor/bower/backbone/backbone",
+    "albaneagra": "./modules/views/albaneagra"
+  },
+   shim: {
+        // This is required to ensure Backbone works as expected within the AMD
+        // environment.
+        "backbone": {
+            // These are the two hard dependencies that will be loaded first.
+            deps: ["jquery", "underscore"],
+
+            // This maps the global `Backbone` object to `require("backbone")`.
+            exports: "Backbone"
+        }
+    }
 });

@@ -15,7 +15,18 @@
 
 <body>
   <!-- Application container. -->
-  <main role="main" id="main"></main>
+  <main role="main" id="main">
+    <script type="text/template" id="container-template">
+      <div class="table">
+        <span id="first"></span>
+        <span id="second"></span>
+        <span id="last"></span>
+        <span id="ball"></span>
+      </div>
+      <p id="start"></p>
+    </script>
+    <div class="content"></div>
+  </main>
 
   <!-- Application source. -->
   <!-- build:[src] /source.min.js -->
